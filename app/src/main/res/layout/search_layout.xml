@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/dietText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="94dp"
+        android:text="Diet Restriction"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/servingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dietText"
+        android:layout_below="@+id/dietText"
+        android:layout_marginTop="42dp"
+        android:text="Serving Restriction"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/prepText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/servingText"
+        android:layout_below="@+id/servingText"
+        android:layout_marginTop="49dp"
+        android:text="Preparation Time"
+        android:textAlignment="center"/>
+
+    <Spinner
+        android:id="@+id/dietSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/dietText"
+        android:layout_above="@+id/servingText"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:id="@+id/servingSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/servingText"
+        android:layout_alignEnd="@+id/dietSpinner"
+        android:layout_alignStart="@+id/dietSpinner"
+        android:layout_alignBottom="@+id/servingText" />
+
+    <Spinner
+        android:id="@+id/prepSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/prepText"
+        android:layout_alignEnd="@+id/servingSpinner"
+        android:layout_alignStart="@+id/dietSpinner"
+        android:layout_alignBottom="@+id/prepText" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prepText"
+        android:layout_marginTop="105dp"
+        android:layout_toEndOf="@+id/prepText"
+        android:text="Search" />
+
+</RelativeLayout>
